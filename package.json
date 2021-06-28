@@ -5,7 +5,18 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "gz": "git cz"
+    "fix": "eslint --fix --ext .js,.ts,.vue,.jsx,.tsx src",
+    "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "gz": "git cz",
+    "install:husky": "husky install"
+  },
+  "lint-staged": {
+    "*.{.ts,.tsx,.vue,.js,.jsx}": [
+      "prettier --write",
+      "eslint --cache --fix",
+      "stylelint --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "vue": "^3.0.5"
@@ -23,7 +34,10 @@
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.3.2",
+    "stylelint": "^13.13.1",
     "typescript": "^4.3.4",
     "vite": "^2.2.3",
     "vue-tsc": "^0.0.24"
