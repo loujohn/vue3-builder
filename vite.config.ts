@@ -43,6 +43,13 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     define: {
       __APP_INFO__: JSON.stringify(__APP_INFO__)
     },
+    css: {
+      preprocessorOptions: {
+        less: {
+          javascriptEnabled: true
+        }
+      }
+    },
     server: {
       host: '0.0.0.0',
       port: VITE_PORT,

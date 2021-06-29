@@ -1,7 +1,8 @@
-import type { ComponentRenderProxy, VNode, ComponentPublicInstance, FunctionalComponent, PropType as VuePropType } from 'vue';
 declare global {
   declare type Recordable<T = any> = Record<string, T>;
-
+  interface ImportMetaEnv extends ViteEnv {
+    __: unknown;
+  }
   declare interface ViteEnv {
     VITE_PORT: number;
     VITE_USE_MOCK: boolean;
@@ -19,3 +20,4 @@ declare global {
     VITE_GENERATE_UI: string;
   }
 }
+export default global;
