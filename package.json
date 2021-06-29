@@ -11,7 +11,7 @@
     "install:husky": "husky install"
   },
   "lint-staged": {
-    "*.{.ts,.tsx,.vue,.js,.jsx}": [
+    "*.{ts,tsx,vue,js,jsx}": [
       "prettier --write",
       "eslint --cache --fix",
       "stylelint --fix"
@@ -44,6 +44,7 @@
     "vite": "^2.2.3",
     "vite-plugin-compression": "^0.2.5",
     "vite-plugin-style-import": "^1.0.1",
+    "vite-plugin-svg-icons": "^1.0.0",
     "vue-tsc": "^0.0.24"
   },
   "config": {
