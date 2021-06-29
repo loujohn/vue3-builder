@@ -1,4 +1,7 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import ant from './lib/ant';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.use(ant).mount('#app');
