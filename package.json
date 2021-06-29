@@ -14,8 +14,7 @@
     "*.{.ts,.tsx,.vue,.js,.jsx}": [
       "prettier --write",
       "eslint --cache --fix",
-      "stylelint --fix",
-      "git add"
+      "stylelint --fix"
     ]
   },
   "dependencies": {
