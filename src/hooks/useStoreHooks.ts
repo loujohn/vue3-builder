@@ -23,6 +23,5 @@ const useStoreHooks = (): UseStoreHooks => {
     dispatch
   };
 };
-
 export { useStoreHooks };
 export default useStoreHooks;
