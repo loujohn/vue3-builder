@@ -1,17 +1,15 @@
 <template>
-  <localization />
+  <menu-left />
 </template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Localization from '@/localization.vue';
-
+import MenuLeft from './MenuLeft/index.vue';
 export default defineComponent({
-  name: 'App',
+  name: 'MenuClassic',
   components: {
-    Localization
-  }
+    MenuLeft
+  },
+  setup() {}
 });
 </script>
-
-<style></style>
+<style lang="scss"></style>

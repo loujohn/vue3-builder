@@ -12,7 +12,8 @@ import {
   Upload,
   DatePicker,
   Select,
-  ConfigProvider
+  ConfigProvider,
+  Drawer
 } from 'ant-design-vue';
 import { App } from 'vue';
 
@@ -32,6 +33,7 @@ const ant = {
     Vue.use(DatePicker);
     Vue.use(Select);
     Vue.use(ConfigProvider);
+    Vue.use(Drawer);
   }
 };
 export default ant;

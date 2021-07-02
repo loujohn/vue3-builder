@@ -1,20 +1,9 @@
-import { createStore } from 'vuex';
-// import state from './state';
-import mutations from './mutations';
-import actions from './actions';
-import setting from './setting';
-import { ISetting } from '/#/setting';
+import type { App } from 'vue';
+import { createPinia } from 'pinia';
 
-export interface State {
-  setting: ISetting;
+const store = createPinia();
+export function setupStore(app: App<Element>) {
+  app.use(store);
 }
 
-const store = createStore<State>({
-  mutations,
-  actions,
-  modules: {
-    setting
-  }
-});
-
-export default store;
+export { store };
