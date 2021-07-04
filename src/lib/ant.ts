@@ -13,7 +13,11 @@ import {
   DatePicker,
   Select,
   ConfigProvider,
-  Drawer
+  Drawer,
+  Collapse,
+  Tooltip,
+  Radio,
+  Switch
 } from 'ant-design-vue';
 import { App } from 'vue';
 
@@ -34,6 +38,10 @@ const ant = {
     Vue.use(Select);
     Vue.use(ConfigProvider);
     Vue.use(Drawer);
+    Vue.use(Collapse);
+    Vue.use(Tooltip);
+    Vue.use(Radio);
+    Vue.use(Switch);
   }
 };
 export default ant;

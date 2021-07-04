@@ -1,8 +1,8 @@
 export type language = 'zh-CN' | 'en-US';
 export interface ISetting {
   locale: language;
-  authProvider: string;
-  logo: 'Visual Builder';
+  logo: string;
+  authProvider: 'jwt';
   version: 'fluent';
   theme: 'default';
   isSidebarOpen: Boolean;
@@ -17,8 +17,8 @@ export interface ISetting {
   menuColor: 'gray';
   authPagesColor: 'gray';
   isAuthTopbar: true;
-  primaryColor: '#4b7cf3';
-  leftMenuWidth: 256;
+  primaryColor: string;
+  leftMenuWidth: number;
   isMenuUnfixed: Boolean;
   isMenuShadow: Boolean;
   isTopbarFixed: Boolean;

@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@ant-design/icons-vue': ^6.0.1
   '@commitlint/cli': ^12.1.4
   '@commitlint/config-conventional': ^12.1.4
   '@types/node': ^15.12.5
@@ -11,6 +12,7 @@ specifiers:
   '@vue/compiler-sfc': ^3.0.5
   ant-design-vue: ^2.2.0-beta.6
   autoprefixer: ^10.2.6
+  bootstrap: ^5.0.2
   commitizen: ^4.2.4
   cz-conventional-changelog: ^3.3.0
   cz-customizable: ^6.3.0
@@ -21,6 +23,7 @@ specifiers:
   husky: ^6.0.0
   less: ^4.1.1
   lint-staged: ^11.0.0
+  lodash: ^4.17.21
   moment: ^2.29.1
   pinia: ^2.0.0-beta.3
   postcss: ^8.3.5
@@ -43,7 +46,10 @@ specifiers:
   vue3-perfect-scrollbar: ^1.5.5
 
 dependencies:
+  '@ant-design/icons-vue': 6.0.1_vue@3.1.2
   ant-design-vue: 2.2.0-beta.6_19302ce34f478e4f4a93d121513cd95b
+  bootstrap: 5.0.2
+  lodash: 4.17.21
   pinia: 2.0.0-beta.3
   vue: 3.1.2
   vue-i18n: 9.1.6_vue@3.1.2
@@ -1291,6 +1297,12 @@ packages:
 
   /boolbase/1.0.0:
     resolution: {integrity: sha1-aN/1++YMUes3cl6p4+0xDcwed24=}
+
+  /bootstrap/5.0.2:
+    resolution: {integrity: sha512-1Ge963tyEQWJJ+8qtXFU6wgmAVj9gweEjibUdbmcCEYsn38tVwRk8107rk2vzt6cfQcRr3SlZ8aQBqaD8aqf+Q==}
+    peerDependencies:
+      '@popperjs/core': ^2.9.2
+    dev: false
 
   /brace-expansion/1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}

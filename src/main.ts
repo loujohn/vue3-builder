@@ -5,7 +5,6 @@ import { setupRouter } from './router/index';
 import { setupStore } from './store';
 import PerfectScrollbar from 'vue3-perfect-scrollbar';
 
-import './style/tailwind.css';
 if (import.meta.env.DEV) {
   import('ant-design-vue/dist/antd.less');
 }

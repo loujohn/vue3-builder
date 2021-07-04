@@ -6,8 +6,8 @@ export const useSettingStore = defineStore({
   id: 'setting',
   state: (): ISetting => ({
     locale: 'zh-CN',
+    logo: 'Vue3 Builder',
     authProvider: 'jwt',
-    logo: 'Visual Builder',
     version: 'fluent',
     theme: 'default',
     isSidebarOpen: false,
@@ -23,7 +23,7 @@ export const useSettingStore = defineStore({
     authPagesColor: 'gray',
     isAuthTopbar: true,
     primaryColor: '#4b7cf3',
-    leftMenuWidth: 256,
+    leftMenuWidth: 300,
     isMenuUnfixed: false,
     isMenuShadow: false,
     isTopbarFixed: false,
@@ -45,9 +45,14 @@ export const useSettingStore = defineStore({
   actions: {
     changeMenuCollapsed(): void {
       this.isMenuCollapsed = !this.isMenuCollapsed;
+      this.changeSetting('preselectedVariant', 'default');
+    },
+    changeSetting<T extends keyof ISetting, U extends ISetting[T]>(key: T, val: U): void {
+      this.$state[key] = val;
     }
   }
 });
+
 export function useSettingStoreWithOut() {
   return useSettingStore(store);
 }
