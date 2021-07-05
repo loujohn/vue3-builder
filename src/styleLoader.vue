@@ -46,9 +46,12 @@ export default defineComponent({
     const settings = useSettingStore();
     // const route = useRoute();
     // const query = computed(() => route.query);
-    // const version = computed(() => settings.version);
+    const version = computed(() => settings.version);
     const theme = computed(() => settings.theme);
     const primaryColor = computed(() => settings.primaryColor);
+    watch(version, (version) => {
+      document.querySelector('html')?.setAttribute('data-vb-version', version);
+    });
     watch(theme, (theme) => {
       document.querySelector('html')?.setAttribute('data-vb-theme', theme);
       settings.changeSetting('menuColor', theme === 'dark' ? 'dark' : 'white');

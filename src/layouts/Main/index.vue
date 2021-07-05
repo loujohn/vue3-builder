@@ -63,7 +63,7 @@ import { computed, onMounted, ref, defineComponent } from 'vue';
 // import VbTopbar from '@/@vb/components/Topbar';
 import VbSidebar from '@/@vb/components/Sidebar/index.vue';
 // import VbSupportChat from '@/@vb/components/SupportChat';
-// import VbVariants from '@/@vb/components/Variants';
+import VbVariants from '@/@vb/components/Variants/index.vue';
 import VbMenuClassic from '@/@vb/components/MenuClassic/index.vue';
 import VbMenuFlyout from '@/@vb/components/MenuFlyout/index.vue';
 import VbMenuSimply from '@/@vb/components/MenuSimply/index.vue';
@@ -84,7 +84,7 @@ export default defineComponent({
     // VbTopbar,
     VbSidebar,
     // VbSupportChat,
-    // VbVariants,
+    VbVariants,
     VbBreadcrumbs,
     VbBreadcrumbs2
     // VbFooter,

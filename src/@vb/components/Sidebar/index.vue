@@ -10,19 +10,19 @@
         <div :class="$style.vb__sidebar__inner">
           <a href="javascript: void(0);" :class="$style.vb__sidebar__close" class="fe fe-x" @click="toggleSettings()"></a>
           <h5 class="mb-4">
-            <strong>Settings</strong>
+            <strong>设置</strong>
           </h5>
           <a-collapse v-model:activeKey="activeKey" accordion :bordered="false">
-            <a-collapse-panel key="1" header="Application Settings">
+            <a-collapse-panel key="1" header="应用设置">
               <div class="pt-2 mb-2">
                 <h6>
-                  <strong>Application Name</strong>
+                  <strong>应用名称</strong>
                 </h6>
                 <a-input :value="settings.logo" @change="changeSettingEvent($event, 'logo')" />
               </div>
               <div class="pt-2 mb-2">
                 <h6>
-                  <strong>Router Animation</strong>
+                  <strong>路由动画</strong>
                 </h6>
                 <a-select :default-value="settings.routerAnimation" style="width: 100%;" @change="(value) => changeSettingValue(value, 'routerAnimation')">
                   <a-select-option value="none">None</a-select-option>
@@ -34,7 +34,7 @@
               </div>
               <div class="pt-2 mb-2">
                 <h6>
-                  <strong>Internationalization</strong>
+                  <strong>语言</strong>
                 </h6>
                 <a-select :value="settings.locale" style="width: 100%;" @change="(value) => changeSettingValue(value, 'locale')">
                   <a-select-option value="en-US">English (en-US)</a-select-option>
@@ -44,12 +44,12 @@
                 </a-select>
               </div>
             </a-collapse-panel>
-            <a-collapse-panel key="2" header="Layout Settings">
+            <a-collapse-panel key="2" header="布局设置">
               <div class="pt-3 mb-2">
                 <h6>
-                  <strong>Visual Builder Style</strong>
+                  <strong>字体样式</strong>
                 </h6>
-                <div class="pt-1 clearfix">
+                <div class="clearfix pt-1">
                   <a-radio-group :default-value="settings.version" @change="changeSettingEvent($event, 'version')">
                     <div class="row">
                       <div class="col-6">
@@ -71,7 +71,7 @@
                 <div class="row">
                   <div class="col-auto mr-auto">
                     <h6>
-                      <strong>Dark Theme</strong>
+                      <strong>暗黑主题</strong>
                     </h6>
                   </div>
                   <div class="col-auto">
@@ -194,12 +194,12 @@
                 </div>
               </div>
             </a-collapse-panel>
-            <a-collapse-panel key="3" header="Menu Settings">
+            <a-collapse-panel key="3" header="菜单设置">
               <div class="pt-2 mb-2">
                 <h6>
                   <strong>Menu Variant</strong>
                 </h6>
-                <div class="pt-1 clearfix">
+                <div class="clearfix pt-1">
                   <a-radio-group :default-value="settings.layoutMenu" @change="changeSettingEvent($event, 'layoutMenu')">
                     <div class="row">
                       <div class="col-6">
@@ -227,7 +227,7 @@
                   <h6>
                     <strong>Menu Layout Type</strong>
                   </h6>
-                  <div class="pt-1 clearfix">
+                  <div class="clearfix pt-1">
                     <a-radio-group :default-value="settings.menuLayoutType" @change="changeSettingEvent($event, 'menuLayoutType')">
                       <div class="row">
                         <div class="col-6">
@@ -246,7 +246,7 @@
                   <h6>
                     <strong>Sub Menu Type</strong>
                   </h6>
-                  <div class="pt-1 clearfix">
+                  <div class="clearfix pt-1">
                     <a-radio-group :default-value="settings.flyoutMenuType" @change="changeSettingEvent($event, 'flyoutMenuType')">
                       <div class="row">
                         <div class="col-6">
@@ -344,7 +344,7 @@
                   <h6>
                     <strong>Menu Width</strong>
                   </h6>
-                  <div class="pt-1 clearfix">
+                  <div class="clearfix pt-1">
                     <a-slider v-model:value="settings.leftMenuWidth" :min="256" :max="330" />
                   </div>
                 </div>
@@ -474,36 +474,7 @@
     <div class="vb__utils__sidebar__buttons">
       <a-tooltip placement="left">
         <template #title>
-          <span>Try Visual Builder</span>
-        </template>
-        <a href="https://visualbuilder.cloud" target="_blank" rel="noopener noreferrer" :class="'vb__utils__sidebar__button'">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1" height="24px" width="24px">
-            <g>
-              <path
-                fill="#4b7cf3"
-                strokeWidth="1"
-                stroke="#4b7cf3"
-                d="M12,10.9c-0.1,0-0.2,0-0.2-0.1L3.5,6.1C3.4,6,3.3,5.8,3.3,5.6c0-0.2,0.1-0.3,0.2-0.4l8.2-4.7c0.2-0.1,0.3-0.1,0.5,0      l8.2,4.7c0.2,0.1,0.2,0.3,0.2,0.4S20.6,6,20.5,6.1l-8.2,4.7C12.2,10.8,12.1,10.9,12,10.9z M4.8,5.6L12,9.8l7.2-4.2L12,1.5      L4.8,5.6z"
-              />
-              <path
-                fill="#4b7cf3"
-                strokeWidth="1"
-                stroke="#4b7cf3"
-                d="M13.6,23.6c-0.1,0-0.2,0-0.2-0.1c-0.2-0.1-0.2-0.3-0.2-0.4v-9.5c0-0.2,0.1-0.3,0.2-0.4l8.2-4.7c0.2-0.1,0.3-0.1,0.5,0      c0.2,0.1,0.2,0.3,0.2,0.4v9.5c0,0.2-0.1,0.3-0.3,0.4l-8.2,4.7C13.8,23.6,13.7,23.6,13.6,23.6z M14.1,13.9v8.3l7.2-4.2V9.8      L14.1,13.9z"
-              />
-              <path
-                fill="#4b7cf3"
-                strokeWidth="1"
-                stroke="#4b7cf3"
-                d="M10.4,23.6c-0.1,0-0.2,0-0.2-0.1l-8.2-4.7c-0.2-0.1-0.3-0.3-0.3-0.4V8.9c0-0.2,0.1-0.3,0.2-0.4c0.2-0.1,0.3-0.1,0.5,0      l8.2,4.7c0.2,0.1,0.2,0.3,0.2,0.4v9.5c0,0.2-0.1,0.3-0.2,0.4C10.5,23.6,10.5,23.6,10.4,23.6z M2.7,18.1l7.2,4.2v-8.3L2.7,9.8      V18.1z"
-              />
-            </g>
-          </svg>
-        </a>
-      </a-tooltip>
-      <a-tooltip placement="left">
-        <template #title>
-          <span>Settings</span>
+          <span>设置</span>
         </template>
         <a href="javascript: void(0);" class="vb__utils__sidebar__button" @click="toggleSettings()">
           <i class="fe fe-settings"></i>
@@ -511,7 +482,7 @@
       </a-tooltip>
       <a-tooltip placement="left">
         <template #title>
-          <span>Pre-Configured Layouts</span>
+          <span>预定义布局</span>
         </template>
         <a href="javascript: void(0);" class="vb__utils__sidebar__button" @click="togglePreselectedThemes()">
           <i class="fe fe-image"></i>
@@ -519,7 +490,7 @@
       </a-tooltip>
       <a-tooltip placement="left">
         <template #title>
-          <span>Switch Dark / Light Theme</span>
+          <span>切换黑夜模式</span>
         </template>
         <a
           href="javascript: void(0);"
@@ -532,7 +503,7 @@
       </a-tooltip>
       <a-tooltip placement="left">
         <template #title>
-          <span>Set Primary Color</span>
+          <span>设置主题色</span>
         </template>
         <a
           href="javascript: void(0);"
@@ -547,14 +518,6 @@
           </button>
           <input id="colorPicker" v-model="settings.primaryColor" type="color" @change="(e) => selectColor(e.target.value)" />
           <i class="fe fe-package"></i>
-        </a>
-      </a-tooltip>
-      <a-tooltip placement="left">
-        <template #title>
-          <span>Documentation</span>
-        </template>
-        <a href="https://docs.cleanuitemplate.com" target="_blank" rel="noopener noreferrer" class="vb__utils__sidebar__button">
-          <i class="fe fe-book-open"></i>
         </a>
       </a-tooltip>
     </div>
