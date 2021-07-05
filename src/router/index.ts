@@ -7,7 +7,13 @@ export const router = createRouter({
   routes: [
     {
       path: '/',
-      component: MainLayout
+      component: MainLayout,
+      children: [
+        {
+          path: 'map',
+          component: () => import('@/@map/map.vue')
+        }
+      ]
     }
   ],
   strict: true,

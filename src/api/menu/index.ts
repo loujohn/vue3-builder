@@ -6,9 +6,9 @@ export const getMenuData = [
     key: 'Dashboards'
   },
   {
-    title: 'Dashboards',
-    key: '__dashboard',
-    url: '/dashboard',
+    title: '首页',
+    key: '__home',
+    url: '/map',
     icon: 'fe fe-home',
     children: [
       {

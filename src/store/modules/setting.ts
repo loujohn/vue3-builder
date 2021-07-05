@@ -55,9 +55,10 @@ export const useSettingStore = defineStore({
   actions: {
     changeMenuCollapsed(): void {
       this.isMenuCollapsed = !this.isMenuCollapsed;
-      this.changeSetting('preselectedVariant', 'default');
+      localStore.set(`app.settings.isMenuCollapsed`, this.isMenuCollapsed);
     },
     changeSetting<T extends keyof ISetting, U extends ISetting[T]>(key: T, val: U): void {
+      localStore.set(`app.settings.${key}`, val);
       this.$state[key] = val;
     },
     changeSettingBulk(setting: Partial<ISetting>): void {

@@ -4,7 +4,7 @@
 <script lang="ts">
 import { computed, defineComponent, watch } from 'vue';
 
-// import '@/style/tailwind.css';
+import '@/style/tailwind.css';
 
 // antd core & themes styles
 import 'ant-design-vue/lib/style/index.less';
@@ -22,9 +22,9 @@ import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
 import '@/@vb/style/vendors/antd/style.scss';
 import '@/@vb/style/vendors/bootstrap/style.scss';
 import '@/@vb/style/vendors/nprogress/style.scss';
-import '@/@vb/style/vendors/he-tree-vue/style.scss';
+// import '@/@vb/style/vendors/he-tree-vue/style.scss';
 import '@/@vb/style/vendors/perfect-scrollbar/style.scss';
-import '@/@vb/style/vendors/quill/style.scss';
+// import '@/@vb/style/vendors/quill/style.scss';
 
 // vb styles
 import '@/@vb/style/core.scss';
