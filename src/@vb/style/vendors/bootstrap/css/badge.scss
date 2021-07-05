@@ -1,22 +1,23 @@
 @import '@/style/mixins.scss';
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 /* BADGE */
 
 .badge {
   font-weight: normal;
-  background: $white;
-  color: $secondary;
   letter-spacing: 1px;
+  color: $secondary;
   text-transform: uppercase;
+  background: $white;
 
   &.badge-example {
-    font-size: rem(14);
-    text-transform: uppercase;
-    background: $gray-2;
-    color: $black;
     display: inline-block;
     padding: rem(3) rem(6);
+    font-size: rem(14);
+    color: $black;
+    text-transform: uppercase;
+    background: $gray-2;
     border-radius: 4px;
 
     &-editor {
@@ -25,40 +26,48 @@
   }
 
   &.badge-default {
+    color: $white;
     background: $default;
-    color: $white;
   }
+
   &.badge-primary {
+    color: $white;
     background: $primary;
-    color: $white;
   }
+
   &.badge-secondary {
+    color: $white;
     background: $secondary;
-    color: $white;
   }
+
   &.badge-success {
+    color: $white;
     background: $success;
-    color: $white;
   }
+
   &.badge-danger {
+    color: $white;
     background: $danger;
-    color: $white;
   }
+
   &.badge-warning {
+    color: $white;
     background: $warning;
-    color: $white;
   }
+
   &.badge-info {
+    color: $white;
     background: $info;
-    color: $white;
   }
+
   &.badge-light {
-    background: $light;
     color: $text;
+    background: $light;
   }
+
   &.badge-dark {
-    background: $dark;
     color: $white;
+    background: $dark;
   }
 }
 
@@ -66,16 +75,18 @@
 [data-vb-theme='dark'] {
   .badge {
     &.badge-example {
-      background: $dark-gray-4;
       color: $dark-gray-2;
+      background: $dark-gray-4;
     }
+
     &.badge-light {
-      background: $dark;
       color: $white;
+      background: $dark;
     }
+
     &.badge-dark {
-      background: $light;
       color: $text;
+      background: $light;
     }
   }
 }

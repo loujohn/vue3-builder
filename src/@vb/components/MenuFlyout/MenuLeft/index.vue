@@ -108,17 +108,6 @@
                 <category v-if="item.category" :key="index" :item="item" :styles="$style" />
               </template>
             </ul>
-            <div :class="$style.air__menuLeft__banner">
-              <p>More components, more styles, more themes, and premium support!</p>
-              <a
-                href="https://themeforest.net/item/air-ui-multi-concept-admin-template/24434456"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-white text-center d-block"
-              >
-                Buy Air UI
-              </a>
-            </div>
           </div>
         </perfect-scrollbar>
       </div>
@@ -160,23 +149,23 @@ export default defineComponent({
       );
     });
 
-    // const toggleMobileMenu = () => {
-    //   const setting = 'isMobileMenuOpen';
-    //   const value = !settings.value[setting];
-    //   store.commit('CHANGE_SETTING', { setting, value });
-    // };
+    const toggleMobileMenu = () => {
+      const setting = 'isMobileMenuOpen';
+      const value = !settings.value[setting];
+      settingsStore.changeSetting(setting, value);
+    };
 
-    // const toggleMenu = () => {
-    //   const setting = 'isMenuCollapsed';
-    //   const value = !settings.value[setting];
-    //   store.commit('CHANGE_SETTING', { setting, value });
-    // };
+    const toggleMenu = () => {
+      const setting = 'isMenuCollapsed';
+      const value = !settings.value[setting];
+      settingsStore.changeSetting(setting, value);
+    };
 
-    // const toggleSettings = () => {
-    //   const setting = 'isSidebarOpen';
-    //   const value = !settings.value[setting];
-    //   store.commit('CHANGE_SETTING', { setting, value });
-    // };
+    const toggleSettings = () => {
+      const setting = 'isSidebarOpen';
+      const value = !settings.value[setting];
+      settingsStore.changeSetting(setting, value);
+    };
 
     const handleSubmenuClick = (key) => {
       const currentKey = activeSubmenu.value;
@@ -255,9 +244,9 @@ export default defineComponent({
       flyoutTimers,
       settings,
       flyoutActive,
-      // toggleMobileMenu,
-      // toggleMenu,
-      // toggleSettings,
+      toggleMobileMenu,
+      toggleMenu,
+      toggleSettings,
       handleSubmenuClick,
       handleFlyoutOver,
       handleFlyoutOut,

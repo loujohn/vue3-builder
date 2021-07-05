@@ -1,39 +1,40 @@
 @import '@/style/mixins.scss';
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 /*  CHARTIST TOOLTIP PLUGIN */
 
 .chartist-tooltip {
   position: absolute;
+  z-index: 100;
   display: none;
   min-width: 5em;
   padding: 8px 10px;
-  background: $black;
   color: #fff;
   text-align: center;
   pointer-events: none;
-  z-index: 100;
-  transition: opacity 0.2s linear;
+  background: $black;
   border-radius: 3px;
   transform: translate3d(3px, 4px, 0);
+  transition: opacity 0.2s linear;
 
   &.tooltip-show {
     display: inline-block;
   }
 
-  &:before {
+  &::before {
     position: absolute;
     bottom: -14px;
     left: 50%;
-    border: solid transparent;
-    content: ' ';
-    height: 0;
     width: 0;
+    height: 0;
+    margin-left: -8px;
     pointer-events: none;
+    border: solid transparent;
     border-color: transparent;
     border-top-color: $black;
     border-width: 7px;
-    margin-left: -8px;
+    content: ' ';
   }
 
   &.hide {

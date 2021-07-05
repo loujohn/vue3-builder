@@ -1,6 +1,7 @@
 @import '@/style/mixins.scss';
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 /* UTILITIES */
 
 // font color
@@ -8,33 +9,43 @@
   &-default {
     color: $default !important;
   }
+
   &-primary {
     color: $primary !important;
   }
+
   &-secondary {
     color: $secondary !important;
   }
+
   &-success {
     color: $success !important;
   }
+
   &-danger {
     color: $danger !important;
   }
+
   &-warning {
     color: $warning !important;
   }
+
   &-info {
     color: $info !important;
   }
+
   &-light {
     color: $light !important;
   }
+
   &-dark {
     color: $dark !important;
   }
+
   &-white {
     color: $white !important;
   }
+
   &-muted {
     color: $gray-5 !important;
   }
@@ -45,30 +56,39 @@
   &-default {
     background-color: $default !important;
   }
+
   &-primary {
     background-color: $primary !important;
   }
+
   &-secondary {
     background-color: $primary !important;
   }
+
   &-success {
     background-color: $success !important;
   }
+
   &-danger {
     background-color: $danger !important;
   }
+
   &-warning {
     background-color: $warning !important;
   }
+
   &-info {
     background-color: $info !important;
   }
+
   &-light {
     background-color: $light !important;
   }
+
   &-dark {
     background-color: $dark !important;
   }
+
   &-white {
     background-color: $white !important;
   }
@@ -80,9 +100,11 @@
     &-light {
       color: $dark !important;
     }
+
     &-dark {
       color: $white !important;
     }
+
     &-muted {
       color: $dark-gray-2 !important;
     }
@@ -92,6 +114,7 @@
     &-light {
       background-color: $dark !important;
     }
+
     &-dark {
       background-color: $dark-gray-1 !important;
     }
@@ -99,6 +122,7 @@
 
   .border {
     border-color: $dark-gray-4 !important;
+
     &-top,
     &-right,
     &-bottom,

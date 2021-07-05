@@ -1,6 +1,7 @@
 @import '@/style/mixins.scss';
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 /* BREADCRUMB */
 
 .breadcrumb {
@@ -12,10 +13,12 @@
   .breadcrumb {
     color: $dark-gray-1;
     background: $dark-gray-4;
+
     .breadcrumb-item {
-      &:before {
+      &::before {
         color: $dark-gray-3;
       }
+
       &.active {
         color: $dark-gray-1;
       }

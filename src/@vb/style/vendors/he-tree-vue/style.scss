@@ -1,29 +1,30 @@
 @import '@/style/mixins.scss';
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 /*  HE-TREE-VUE */
 
 .tree {
   &-placeholder-node {
     min-height: rem(40);
-    border-radius: 4px;
     background: $gray-1 !important;
+    border-radius: 4px;
   }
 
   &-node {
-    border: none !important;
     padding: 0 !important;
+    border: none !important;
 
     &-item {
       display: flex;
 
       button {
-        border: none;
-        border-radius: 4px;
-        background: $gray-1;
+        display: block;
         width: rem(40);
         height: rem(40);
-        display: block;
+        background: $gray-1;
+        border: none;
+        border-radius: 4px;
       }
     }
 

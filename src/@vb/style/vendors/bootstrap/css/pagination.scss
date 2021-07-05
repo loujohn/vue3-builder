@@ -1,25 +1,29 @@
 @import '@/style/mixins.scss';
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 /* PAGINATION */
 
 .pagination {
   .page-link {
-    border-color: $border;
-    color: $text;
-    outline: none;
     margin-bottom: rem(10);
+    color: $text;
+    border-color: $border;
+    outline: none;
+
     &:hover,
     &:focus {
       background: $gray-1;
     }
   }
+
   .page-item {
     &.disabled {
       .page-link {
         background: $gray-1;
       }
     }
+
     &.active {
       .page-link {
         background: $primary;
@@ -31,14 +35,15 @@
 
 .pager {
   li > a {
-    border-color: $gray-5;
     color: $text;
-    outline: none;
+    border-color: $gray-5;
     border-radius: 3px;
+    outline: none;
+
     &:hover,
     &:focus {
-      background: $default;
       color: $white;
+      background: $default;
       border-color: $default;
     }
   }
@@ -48,21 +53,22 @@
 [data-vb-theme='dark'] {
   .pagination {
     .page-link {
-      border-color: $dark-gray-4;
       background: $dark-gray-4;
+      border-color: $dark-gray-4;
+
       &:hover,
       &:focus {
+        color: $white;
         background: $primary;
         border-color: $primary;
-        color: $white;
       }
     }
 
     .page-item {
       &.disabled {
         .page-link {
-          opacity: 0.5;
           background: $dark-gray-4;
+          opacity: 0.5;
         }
       }
     }

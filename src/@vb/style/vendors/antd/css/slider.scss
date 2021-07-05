@@ -8,11 +8,14 @@
     &-rail {
       background: $dark-gray-4;
     }
+
     &-track {
       background: $primary;
     }
+
     &-dot {
       border-color: $dark-gray-3;
+
       &-active {
         border-color: $primary;
       }

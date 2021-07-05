@@ -3,9 +3,11 @@
 
 .ant-collapse {
   background: $gray-1 !important;
+
   &-content {
     background: none;
   }
+
   &.ant-collapse-borderless {
     .ant-collapse {
       &-content {
@@ -20,9 +22,11 @@
 [data-vb-theme='dark'] {
   .ant-collapse {
     background: transparent !important;
+
     &-content {
       background: none;
     }
+
     &.ant-collapse-borderless {
       .ant-collapse {
         &-content {
@@ -30,9 +34,10 @@
         }
       }
     }
+
     &-header {
-      background: $dark-gray-5;
       color: $dark-gray-1 !important;
+      background: $dark-gray-5;
     }
   }
 }

@@ -17,7 +17,9 @@ import {
   Collapse,
   Tooltip,
   Radio,
-  Switch
+  Switch,
+  Slider,
+  Dropdown
 } from 'ant-design-vue';
 import { App } from 'vue';
 
@@ -42,6 +44,8 @@ const ant = {
     Vue.use(Tooltip);
     Vue.use(Radio);
     Vue.use(Switch);
+    Vue.use(Slider);
+    Vue.use(Dropdown);
   }
 };
 export default ant;

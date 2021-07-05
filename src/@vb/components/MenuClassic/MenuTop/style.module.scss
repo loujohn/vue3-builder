@@ -3,105 +3,111 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 /* MENU COMPONENT */
 .menu {
-  border-bottom: 1px solid $border;
   display: flex;
-  flex-direction: row;
-  background: $white;
   font-size: rem(15);
+  background: $white;
+  border-bottom: 1px solid $border;
+  flex-direction: row;
 
   /////////////////////////////////////////////////////////////////////////////////////////
+
   /* LOGO */
   .logoContainer {
-    height: 48px;
     display: flex;
-    align-items: center;
+    height: 48px;
     padding: 0 rem(28);
+    align-items: center;
 
     .logo {
       display: flex;
-      flex-direction: row;
-      align-items: center;
       height: rem(24);
       white-space: nowrap;
+      flex-direction: row;
+      align-items: center;
 
       svg {
-        margin-right: rem(6);
-        height: rem(30);
-        width: rem(30);
-        path:nth-child(1) {
-          stroke: $primary;
-          fill: $primary;
-          stroke-width: 1px;
-          animation: logoAnimate 6s ease-in-out infinite;
-        }
-        path:nth-child(2) {
-          stroke: $primary;
-          fill: $primary;
-          stroke-width: 1px;
-          animation: logoAnimate 6s ease-in-out infinite;
-          animation-delay: 2s;
-        }
-        path:nth-child(3) {
-          stroke: $primary;
-          fill: $primary;
-          stroke-width: 1px;
-          animation: logoAnimate 6s ease-in-out infinite;
-          animation-delay: 4s;
-        }
 
         @keyframes logoAnimate {
           0% {
             stroke: $primary;
             fill: $primary;
           }
+
           50% {
             stroke: #1ad697;
             fill: #1ad697;
           }
+
           100% {
             stroke: $primary;
             fill: $primary;
           }
         }
+
+        width: rem(30);
+        height: rem(30);
+        margin-right: rem(6);
+
+        path:nth-child(1) {
+          animation: logoAnimate 6s ease-in-out infinite;
+          stroke: $primary;
+          fill: $primary;
+          stroke-width: 1px;
+        }
+
+        path:nth-child(2) {
+          animation: logoAnimate 6s ease-in-out infinite;
+          animation-delay: 2s;
+          stroke: $primary;
+          fill: $primary;
+          stroke-width: 1px;
+        }
+
+        path:nth-child(3) {
+          animation: logoAnimate 6s ease-in-out infinite;
+          animation-delay: 4s;
+          stroke: $primary;
+          fill: $primary;
+          stroke-width: 1px;
+        }
       }
     }
+
     .name {
       font-size: rem(18);
       font-weight: 700;
       color: $black;
     }
+
     .descr {
-      margin-left: rem(13);
-      padding-left: rem(13);
       height: rem(28);
+      padding-left: rem(13);
+      margin-left: rem(13);
+      font-size: rem(14);
       line-height: rem(28);
       border-left: 1px solid $gray-2;
-      font-size: rem(14);
     }
   }
 
   /////////////////////////////////////////////////////////////////////////////////////////
+
   /* ANTD MENU CUSTOMIZATION */
   .navigation {
-    flex: 1 1 0%;
-    overflow: hidden;
     padding-bottom: 1px;
+    overflow: hidden;
+    flex: 1 1 0%;
 
     .title {
       font-size: rem(15);
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////
+
     /* ICON */
     .icon {
-      color: $gray-5;
-      margin-right: rem(10);
-      font-size: rem(17);
-      transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-      position: relative;
-      top: 2px;
 
       @at-root {
         :global(.ant-menu-submenu-popup) {
@@ -110,6 +116,13 @@
           }
         }
       }
+
+      position: relative;
+      top: 2px;
+      margin-right: rem(10);
+      font-size: rem(17);
+      color: $gray-5;
+      transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 
     :global(.ant-menu-submenu-title) {
@@ -135,8 +148,8 @@
     }
 
     :global(.ant-menu-horizontal) {
-      border-bottom: 0;
       background: transparent;
+      border-bottom: 0;
     }
 
     :global(.ant-menu-submenu-selected) {
@@ -155,12 +168,14 @@
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 /* GRAY THEME */
 .gray {
   background: $gray-1 !important;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 /* DARK THEME */
 .dark {
   color: $dark-gray-1;
@@ -171,6 +186,7 @@
     .name {
       color: $white;
     }
+
     .descr {
       color: $dark-gray-2;
       border-left: 1px solid $dark-gray-4;

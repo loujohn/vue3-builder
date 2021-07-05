@@ -1,15 +1,16 @@
 @import '@/style/mixins.scss';
 
 .vb__sidebar {
-  width: 300px;
+  @include transition-slow();
+
   position: fixed;
-  z-index: 999;
   top: 0;
   right: 0;
   bottom: 0;
+  z-index: 999;
+  width: 300px;
   background: $white;
   transform: translateX(300px);
-  @include transition-slow();
 
   h6 {
     margin-bottom: rem(15);
@@ -32,9 +33,9 @@
 
   // mobile toggle button
   &__close {
-    float: right;
     position: relative;
     top: 3px;
+    float: right;
   }
 
   &__inner {
@@ -53,22 +54,22 @@
 
   &__select {
     &__item {
-      margin-left: rem(2);
       display: block;
+      float: left;
       width: 24px;
       height: 24px;
+      padding: 1px;
+      margin-left: rem(2);
+      cursor: pointer;
       border: 2px solid transparent;
       border-radius: 24px;
-      float: left;
-      padding: 1px;
-      cursor: pointer;
 
-      &:after {
-        content: '';
+      &::after {
         display: block;
         width: 18px;
         height: 18px;
         border-radius: 18px;
+        content: '';
       }
 
       &__active {
@@ -76,32 +77,32 @@
       }
 
       &__white {
-        &:after {
-          border: 1px solid $gray-2;
+        &::after {
           background: $white;
+          border: 1px solid $gray-2;
         }
       }
 
       &__gray {
-        &:after {
+        &::after {
           background: $gray-1;
         }
       }
 
       &__blue {
-        &:after {
+        &::after {
           background: $blue;
         }
       }
 
       &__black {
-        &:after {
+        &::after {
           background: $black;
         }
       }
 
       &__img {
-        &:after {
+        &::after {
           background: linear-gradient(
             to right,
             rgba(240, 240, 240, 1) 0%,
@@ -121,7 +122,7 @@
     &__select {
       &__item {
         &__black {
-          &:after {
+          &::after {
             background: $dark-gray-4;
           }
         }

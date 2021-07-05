@@ -24,7 +24,7 @@
                 <h6>
                   <strong>Router Animation</strong>
                 </h6>
-                <a-select :default-value="settings.routerAnimation" style="width: 100%" @change="(value) => changeSettingValue(value, 'routerAnimation')">
+                <a-select :default-value="settings.routerAnimation" style="width: 100%;" @change="(value) => changeSettingValue(value, 'routerAnimation')">
                   <a-select-option value="none">None</a-select-option>
                   <a-select-option value="slide-fadein-up">Slide Up</a-select-option>
                   <a-select-option value="slide-fadein-right">Slide Right</a-select-option>
@@ -36,7 +36,7 @@
                 <h6>
                   <strong>Internationalization</strong>
                 </h6>
-                <a-select :value="settings.locale" style="width: 100%" @change="(value) => changeSettingValue(value, 'locale')">
+                <a-select :value="settings.locale" style="width: 100%;" @change="(value) => changeSettingValue(value, 'locale')">
                   <a-select-option value="en-US">English (en-US)</a-select-option>
                   <a-select-option value="fr-FR">French (fr-FR)</a-select-option>
                   <a-select-option value="ru-RU">Русский (ru-RU)</a-select-option>
@@ -586,7 +586,7 @@ export default defineComponent({
       settings.changeSetting(setting, value);
     };
     const changeSettingSwitch = (e, setting) => {
-      const value = !settings.value[setting];
+      const value = !settings[setting];
       settings.changeSetting(setting, value);
     };
     const toggleSettings = () => {

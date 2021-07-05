@@ -19,6 +19,7 @@
 </template>
 
 <script lang="ts">
+import { useSettingStore } from '@/store/modules/setting';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -36,10 +37,14 @@ export default defineComponent({
       default: () => []
     }
   },
-  methods: {
-    colorPickerHandler(setting, value) {
-      this.$store.commit('CHANGE_SETTING', { setting, value });
-    }
+  setup() {
+    const settings = useSettingStore();
+    const colorPickerHandler = (setting, value) => {
+      settings.changeSetting(setting, value);
+    };
+    return {
+      colorPickerHandler
+    };
   }
 });
 </script>

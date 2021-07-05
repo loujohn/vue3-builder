@@ -130,24 +130,23 @@ export default defineComponent({
     const flyoutActive = computed(() => {
       return !settings.value.isMobileView;
     });
+    const toggleMobileMenu = () => {
+      const setting = 'isMobileMenuOpen';
+      const value = !settings.value[setting];
+      settingsStore.changeSetting(setting, value);
+    };
 
-    // const toggleMobileMenu = () => {
-    //   const setting = 'isMobileMenuOpen';
-    //   const value = !settings.value[setting];
-    //   store.commit('CHANGE_SETTING', { setting, value });
-    // };
+    const toggleMenu = () => {
+      const setting = 'isMenuCollapsed';
+      const value = !settings.value[setting];
+      settingsStore.changeSetting(setting, value);
+    };
 
-    // const toggleMenu = () => {
-    //   const setting = 'isMenuCollapsed';
-    //   const value = !settings.value[setting];
-    //   store.commit('CHANGE_SETTING', { setting, value });
-    // };
-
-    // const toggleSettings = () => {
-    //   const setting = 'isSidebarOpen';
-    //   const value = !settings.value[setting];
-    //   store.commit('CHANGE_SETTING', { setting, value });
-    // };
+    const toggleSettings = () => {
+      const setting = 'isSidebarOpen';
+      const value = !settings.value[setting];
+      settingsStore.changeSetting(setting, value);
+    };
 
     const handleSubmenuClick = (key) => {
       const currentKey = activeSubmenu.value;
@@ -226,9 +225,9 @@ export default defineComponent({
       flyoutTimers,
       settings,
       flyoutActive,
-      // toggleMobileMenu,
-      // toggleMenu,
-      // toggleSettings,
+      toggleMobileMenu,
+      toggleMenu,
+      toggleSettings,
       handleSubmenuClick,
       handleFlyoutOver,
       handleFlyoutOut,

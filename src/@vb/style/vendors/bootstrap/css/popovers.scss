@@ -1,41 +1,48 @@
 @import '@/style/mixins.scss';
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 /* POPOVERS */
 
 .popover {
   border-color: $border;
+
   .popover-inner {
     border-width: rem(8);
-    &:after {
+
+    &::after {
       border-width: rem(7);
     }
   }
+
   .popover-header {
+    padding: rem(8) rem(15);
+    margin: -1px;
     font-weight: 600;
     background: $gray-1;
-    margin: -1px;
-    padding: rem(8) rem(15);
     border-radius: 3px 3px 0 0;
   }
 
   &.bs-popover-right .arrow {
-    &:before {
+    &::before {
       border-right-color: $border;
     }
   }
+
   &.bs-popover-left .arrow {
-    &:before {
+    &::before {
       border-left-color: $border;
     }
   }
+
   &.bs-popover-bottom .arrow {
-    &:before {
+    &::before {
       border-bottom-color: $border;
     }
   }
+
   &.bs-popover-top .arrow {
-    &:before {
+    &::before {
       border-top-color: $border;
     }
   }
@@ -44,46 +51,55 @@
 // dark theme
 [data-vb-theme='dark'] {
   .popover {
-    border-color: $dark-gray-4;
     background: $dark-gray-6;
+    border-color: $dark-gray-4;
+
     .popover-header {
-      background: $dark-gray-4;
       color: $white;
+      background: $dark-gray-4;
       border-color: $dark-gray-4;
     }
+
     .popover-body {
       color: $dark-gray-1;
     }
 
     &.bs-popover-right .arrow {
-      &:before {
+      &::before {
         border-right-color: $dark-gray-4;
       }
-      &:after {
+
+      &::after {
         border-right-color: $dark-gray-6;
       }
     }
+
     &.bs-popover-left .arrow {
-      &:before {
+      &::before {
         border-left-color: $dark-gray-4;
       }
-      &:after {
+
+      &::after {
         border-left-color: $dark-gray-6;
       }
     }
+
     &.bs-popover-bottom .arrow {
-      &:before {
+      &::before {
         border-bottom-color: $dark-gray-4;
       }
-      &:after {
+
+      &::after {
         border-bottom-color: $dark-gray-6;
       }
     }
+
     &.bs-popover-top .arrow {
-      &:before {
+      &::before {
         border-top-color: $dark-gray-4;
       }
-      &:after {
+
+      &::after {
         border-top-color: $dark-gray-6;
       }
     }

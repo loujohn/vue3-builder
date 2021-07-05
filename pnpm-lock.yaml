@@ -29,6 +29,7 @@ specifiers:
   postcss: ^8.3.5
   prettier: ^2.3.2
   sass: ^1.35.1
+  store: ^2.0.12
   stylelint: ^13.13.1
   stylelint-config-prettier: ^8.0.2
   stylelint-config-standard: ^22.0.0
@@ -51,6 +52,7 @@ dependencies:
   bootstrap: 5.0.2
   lodash: 4.17.21
   pinia: 2.0.0-beta.3
+  store: 2.0.12
   vue: 3.1.2
   vue-i18n: 9.1.6_vue@3.1.2
   vue-router: 4.0.10_vue@3.1.2
@@ -5568,6 +5570,10 @@ packages:
       define-property: 0.2.5
       object-copy: 0.1.0
     dev: true
+
+  /store/2.0.12:
+    resolution: {integrity: sha1-jFNOKguDH3K3X8XxEZhXxE711ZM=}
+    dev: false
 
   /strict-uri-encode/1.1.0:
     resolution: {integrity: sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=}

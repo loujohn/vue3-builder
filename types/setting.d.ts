@@ -4,10 +4,11 @@ export interface ISetting {
   logo: string;
   authProvider: 'jwt';
   version: 'fluent';
-  theme: 'default';
+  theme: 'default' | 'dark';
   isSidebarOpen: Boolean;
   isSupportChatOpen: Boolean;
   isMobileView: Boolean;
+  isTabletView: Boolean;
   isMobileMenuOpen: Boolean;
   isMenuCollapsed: Boolean;
   isPreselectedOpen: Boolean;
@@ -36,4 +37,5 @@ export interface ISetting {
   layoutFooter: 'v1';
   flyoutMenuType: 'flyout';
   flyoutMenuColor: 'blue';
+  isSettingsOpen: Boolean;
 }

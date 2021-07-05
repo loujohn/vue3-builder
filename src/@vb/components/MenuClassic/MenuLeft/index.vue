@@ -78,12 +78,17 @@
   </a-layout-sider>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
 import { getMenuData } from '@/api/menu';
-import { computed } from 'vue';
+import { computed, onMounted, watch, defineComponent, ref } from 'vue';
 import { useSettingStore } from '@/store/modules/setting';
+import { useUserStore } from '@/store/modules/user';
+
 import Item from './partials/item.vue';
 import SubMenu from './partials/submenu.vue';
+import { useRoute } from 'vue-router';
+import { default as localStore } from 'store';
+import find from 'lodash/find';
+
 export default defineComponent({
   name: 'MenuLeft',
   components: {
@@ -93,13 +98,56 @@ export default defineComponent({
   setup() {
     const menuData = computed(() => getMenuData);
     const settings = useSettingStore();
+    const user = useUserStore();
+    const selectedKeys = ref([]);
+    const openKeys = ref([]);
+    const isMenuCollapsed = computed(() => settings.isMenuCollapsed);
+    const route = useRoute();
+    const pathname = computed(() => route.pathname);
+
     const onCollapse = () => {
-      settings.changeMenuCollapsed();
+      settings.changeSetting('isMenuCollapsed', !settings.isMenuCollapsed);
     };
+    const handleClick = (e) => {
+      if (e.key === 'settings') {
+        settings.changeSetting('isSettingsOpen', true);
+        return;
+      }
+      localStore.set('app.menu.selectedKeys', [e.key]);
+      selectedKeys.value = [e.key];
+    };
+    const handleOpenChange = (openKeys) => {
+      localStore.set('app.menu.openedKeys', openKeys);
+      openKeys.value = openKeys;
+    };
+    const setSelectedKeys = () => {
+      const flattenItems = (items, key) =>
+        items.reduce((flattenedItems, item) => {
+          flattenedItems.push(item);
+          if (Array.isArray(item[key])) {
+            return flattenedItems.concat(flattenItems(item[key], key));
+          }
+          return flattenedItems;
+        }, []);
+      const selectedItem = find(flattenItems(menuData.value.concat(), 'children'), ['url', pathname]);
+      selectedKeys.value = selectedItem ? [selectedItem.key] : [];
+    };
+    onMounted(() => {
+      openKeys.value = localStore.get('app.menu.openedKeys') || [];
+      selectedKeys.value = localStore.get('app.menu.selectedKeys') || [];
+      setSelectedKeys();
+    });
+    watch(pathname, () => setSelectedKeys());
+    watch(isMenuCollapsed, () => (openKeys.value = []));
     return {
       menuData,
+      selectedKeys,
+      openKeys,
       settings,
-      onCollapse
+      user,
+      onCollapse,
+      handleClick,
+      handleOpenChange
     };
   }
 });

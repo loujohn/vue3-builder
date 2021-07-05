@@ -1,27 +1,33 @@
 @import '@/style/mixins.scss';
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 /* BUTTONS */
 
 .btn-group-justified {
   display: table;
   width: 100%;
-  table-layout: fixed;
   border-collapse: separate;
+  table-layout: fixed;
+
   > .btn-group {
-    float: none;
     display: table-cell;
+    float: none;
     width: 1%;
+
     > .btn {
       width: 100%;
     }
   }
+
   &.btn-group-vertical {
     display: block;
+
     > .btn-group {
       display: block;
       width: 100%;
     }
+
     > label {
       margin-bottom: 0;
     }
@@ -35,24 +41,29 @@ label.btn {
 }
 
 .btn {
+  border-radius: 8px;
   outline: none !important;
   transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out;
-  border-radius: 8px;
+
   &:hover,
   &:active {
     transition: color 0.1s ease-in-out, background 0.1s ease-in-out, border 0.1s ease-in-out;
   }
+
   &.btn-rounded {
     border-radius: 100px;
   }
+
   &.btn-squared {
     border-radius: 0;
   }
+
   &.btn-link {
     color: $primary;
-    border-color: transparent !important;
-    background: none !important;
     text-decoration: none;
+    background: none !important;
+    border-color: transparent !important;
+
     &:hover,
     &:active,
     &:focus,
@@ -63,26 +74,26 @@ label.btn {
 }
 
 .btn-with-addon {
-  overflow: hidden;
   position: relative;
   padding-left: rem(50) !important;
+  overflow: hidden;
   border: none;
 
   .btn-addon {
     position: absolute;
-    z-index: 1;
     top: -1px;
-    left: -1px;
     bottom: -1px;
-    background-color: rgba($white, 0.2);
+    left: -1px;
+    z-index: 1;
     width: rem(40);
+    background-color: rgba($white, 0.2);
   }
 
   .btn-addon-icon {
-    font-size: rem(16);
     position: absolute;
     top: 50%;
     left: 50%;
+    font-size: rem(16);
     transform: translate(-50%, -50%);
   }
 }
@@ -92,11 +103,13 @@ label.btn {
   color: $text;
   background-color: $white;
   border-color: $border;
+
   &:hover,
   &:active {
     background-color: $gray-2;
     border-color: $gray-2;
   }
+
   &:hover:active,
   &:focus,
   &.active {
@@ -118,11 +131,13 @@ label.btn {
   &.btn-default {
     background-color: $default;
     border-color: $default;
+
     &:hover,
     &:active {
       background-color: lighten($default, 6%);
       border-color: lighten($default, 6%);
     }
+
     &:hover:active,
     &:focus,
     &.active {
@@ -130,14 +145,17 @@ label.btn {
       border-color: darken($default, 6%);
     }
   }
+
   &.btn-primary {
     background-color: $primary;
     border-color: $primary;
+
     &:hover,
     &:active {
       background-color: $blue-light;
       border-color: $blue-light;
     }
+
     &:hover:active,
     &:focus,
     &.active {
@@ -145,14 +163,17 @@ label.btn {
       border-color: $blue-dark !important;
     }
   }
+
   &.btn-secondary {
     background-color: $secondary;
     border-color: $secondary;
+
     &:hover,
     &:active {
       background-color: lighten($secondary, 6%);
       border-color: lighten($secondary, 6%);
     }
+
     &:hover:active,
     &:focus,
     &.active {
@@ -160,14 +181,17 @@ label.btn {
       border-color: darken($secondary, 6%);
     }
   }
+
   &.btn-success {
     background-color: $success;
     border-color: $success;
+
     &:hover,
     &:active {
       background-color: lighten($success, 6%);
       border-color: lighten($success, 6%);
     }
+
     &:hover:active,
     &:focus,
     &.active {
@@ -175,14 +199,17 @@ label.btn {
       border-color: darken($success, 6%);
     }
   }
+
   &.btn-danger {
     background-color: $danger;
     border-color: $danger;
+
     &:hover,
     &:active {
       background-color: lighten($danger, 6%);
       border-color: lighten($danger, 6%);
     }
+
     &:hover:active,
     &:focus,
     &.active {
@@ -190,14 +217,17 @@ label.btn {
       border-color: darken($danger, 6%);
     }
   }
+
   &.btn-warning {
     background-color: $warning;
     border-color: $warning;
+
     &:hover,
     &:active {
       background-color: lighten($warning, 6%);
       border-color: lighten($warning, 6%);
     }
+
     &:hover:active,
     &:focus,
     &.active {
@@ -205,14 +235,17 @@ label.btn {
       border-color: darken($warning, 6%);
     }
   }
+
   &.btn-info {
     background-color: $info;
     border-color: $info;
+
     &:hover,
     &:active {
       background-color: lighten($info, 6%);
       border-color: lighten($info, 6%);
     }
+
     &:hover:active,
     &:focus,
     &.active {
@@ -220,14 +253,17 @@ label.btn {
       border-color: darken($info, 6%);
     }
   }
+
   &.btn-light {
     background-color: $light;
     border-color: $light;
+
     &:hover,
     &:active {
       background-color: darken($light, 6%);
       border-color: darken($light, 6%);
     }
+
     &:hover:active,
     &:focus,
     &.active {
@@ -235,14 +271,17 @@ label.btn {
       border-color: darken($light, 10%);
     }
   }
+
   &.btn-dark {
     background-color: $dark;
     border-color: $dark;
+
     &:hover,
     &:active {
       background-color: lighten($dark, 6%);
       border-color: lighten($dark, 6%);
     }
+
     &:hover:active,
     &:focus,
     &.active {
@@ -255,11 +294,13 @@ label.btn {
     color: $text;
     background-color: $white;
     border-color: $border;
+
     &:hover,
     &:active {
       background-color: $gray-2 !important;
       border-color: $gray-2;
     }
+
     &:hover:active,
     &:focus,
     &.active {
@@ -267,141 +308,164 @@ label.btn {
       border-color: $gray-2;
     }
   }
+
   &.btn-outline-primary {
-    border-color: $primary;
     color: $primary;
+    border-color: $primary;
+
     &:hover,
     &:active {
+      color: $white;
       background-color: $blue-light !important;
       border-color: $blue-light;
-      color: $white;
     }
+
     &:hover:active,
     &:focus,
     &.active {
+      color: $white;
       background-color: $blue-dark !important;
       border-color: $blue-dark;
-      color: $white;
     }
   }
+
   &.btn-outline-secondary {
-    border-color: $secondary;
     color: $secondary;
+    border-color: $secondary;
+
     &:hover,
     &:active {
+      color: $white;
       background-color: lighten($secondary, 6%) !important;
       border-color: lighten($secondary, 6%);
-      color: $white;
     }
+
     &:hover:active,
     &:focus,
     &.active {
+      color: $white;
       background-color: darken($secondary, 6%) !important;
       border-color: darken($secondary, 6%);
-      color: $white;
     }
   }
+
   &.btn-outline-success {
-    border-color: $success;
     color: $success;
+    border-color: $success;
+
     &:hover,
     &:active {
+      color: $white;
       background-color: lighten($success, 6%) !important;
       border-color: lighten($success, 6%);
-      color: $white;
     }
+
     &:hover:active,
     &:focus,
     &.active {
+      color: $white;
       background-color: darken($success, 6%) !important;
       border-color: darken($success, 6%);
-      color: $white;
     }
   }
+
   &.btn-outline-danger {
-    border-color: $danger;
     color: $danger;
+    border-color: $danger;
+
     &:hover,
     &:active {
+      color: $white;
       background-color: lighten($danger, 6%) !important;
       border-color: lighten($danger, 6%);
-      color: $white;
     }
+
     &:hover:active,
     &:focus,
     &.active {
+      color: $white;
       background-color: darken($danger, 6%) !important;
       border-color: darken($danger, 6%);
-      color: $white;
     }
   }
 
   &.btn-outline-warning {
-    border-color: $warning;
     color: $warning;
+    border-color: $warning;
+
     &:hover,
     &:active {
+      color: $white;
       background-color: lighten($warning, 6%) !important;
       border-color: lighten($warning, 6%);
-      color: $white;
     }
+
     &:hover:active,
     &:focus,
     &.active {
+      color: $white;
       background-color: darken($warning, 6%) !important;
       border-color: darken($warning, 6%);
-      color: $white;
     }
   }
+
   &.btn-outline-info {
-    border-color: $info;
     color: $info;
+    border-color: $info;
+
     &:hover,
     &:active {
+      color: $white;
       background-color: lighten($info, 6%) !important;
       border-color: lighten($info, 6%);
-      color: $white;
     }
+
     &:hover:active,
     &:focus,
     &.active {
+      color: $white;
       background-color: darken($info, 6%) !important;
       border-color: darken($info, 6%);
-      color: $white;
     }
   }
+
   &.btn-outline-light {
-    border-color: $light;
     color: $text;
+    border-color: $light;
+
     &:hover,
     &:active {
+      color: $primary;
       background-color: darken($light, 6%) !important;
       border-color: darken($light, 6%);
-      color: $primary;
     }
+
     &:hover:active,
     &:focus,
     &.active {
+      color: $primary;
       background-color: darken($light, 6%) !important;
       border-color: darken($light, 6%);
-      color: $primary;
     }
   }
+
   &.btn-outline-dark {
-    border-color: $dark;
     color: $dark;
+    border-color: $dark;
+
     &:hover,
     &:active {
+      color: $white;
       background-color: lighten($dark, 6%) !important;
       border-color: lighten($dark, 6%);
-      color: $white;
     }
+
     &:hover:active,
     &:focus,
     &.active {
+      color: $white;
       background-color: darken($dark, 6%) !important;
       border-color: darken($dark, 6%);
-      color: $white;
     }
   }
 }
@@ -413,32 +477,37 @@ label.btn {
   .show > .btn {
     &.btn-light,
     &.btn-outline-default {
+      color: $dark-gray-1;
       background-color: $dark;
       border-color: $dark;
-      color: $dark-gray-1;
+
       &:hover,
       &:active {
+        color: $dark-gray-1;
         background-color: lighten($dark, 4%) !important;
         border-color: lighten($dark, 4%) !important;
-        color: $dark-gray-1;
       }
+
       &:hover:active,
       &:focus,
       &.active {
+        color: $dark-gray-1;
         background-color: lighten($dark, 6%) !important;
         border-color: lighten($dark, 6%) !important;
-        color: $dark-gray-1;
       }
     }
+
     &.btn-dark {
+      color: $dark-gray-4 !important;
       background-color: $light;
       border-color: $light;
-      color: $dark-gray-4 !important;
+
       &:hover,
       &:active {
         background-color: darken($light, 6%);
         border-color: darken($light, 6%);
       }
+
       &:hover:active,
       &:focus,
       &.active {
@@ -446,6 +515,7 @@ label.btn {
         border-color: darken($light, 10%);
       }
     }
+
     &.btn-outline-primary,
     &.btn-outline-secondary,
     &.btn-outline-success,
@@ -456,14 +526,17 @@ label.btn {
     &.btn-outline-dark {
       background: transparent;
     }
+
     &.btn-outline-light {
-      border-color: $dark;
       color: $dark-gray-1;
+      border-color: $dark;
+
       &:hover,
       &:active {
         background-color: lighten($dark, 4%) !important;
         border-color: lighten($dark, 4%);
       }
+
       &:hover:active,
       &:focus,
       &.active {
@@ -471,15 +544,18 @@ label.btn {
         border-color: darken($dark, 6%);
       }
     }
+
     &.btn-outline-dark {
-      border-color: $light;
       color: $light;
+      border-color: $light;
+
       &:hover,
       &:active {
         color: $dark-gray-4 !important;
         background-color: darken($light, 6%) !important;
         border-color: darken($light, 6%);
       }
+
       &:hover:active,
       &:focus,
       &.active {

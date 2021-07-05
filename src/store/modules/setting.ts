@@ -40,7 +40,9 @@ export const useSettingStore = defineStore({
     layoutBreadcrumbs: 'v1',
     layoutFooter: 'v1',
     flyoutMenuType: 'flyout',
-    flyoutMenuColor: 'blue'
+    flyoutMenuColor: 'blue',
+    isSettingsOpen: false,
+    isTabletView: false
   }),
   actions: {
     changeMenuCollapsed(): void {

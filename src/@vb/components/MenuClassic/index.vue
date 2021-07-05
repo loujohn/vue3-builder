@@ -24,10 +24,16 @@ export default defineComponent({
   setup() {
     const settingsStore = useSettingStore();
     const settings = computed(() => settingsStore.$state);
+    const toggleMobileMenu = () => {
+      settingsStore.changeSetting('isMobileMenuOpen', !settingsStore.isMobileMenuOpen);
+    };
     return {
-      settings
+      settings,
+      toggleMobileMenu
     };
   }
 });
 </script>
-<style lang="scss"></style>
+<style lang="scss" module>
+@import './style.module.scss';
+</style>

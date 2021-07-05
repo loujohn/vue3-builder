@@ -8,8 +8,10 @@
     &-panel-input {
       background: transparent;
     }
+
     &-panel-select-option-selected {
       background: $primary;
+
       &:hover {
         background: $primary;
       }

@@ -1,6 +1,7 @@
 @import '@/style/mixins.scss';
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 /* CARDS */
 
 .card,
@@ -12,11 +13,11 @@
 .card-header,
 .card-footer,
 .card-body {
-  background: transparent;
   padding: rem(20) rem(25);
+  background: transparent;
   @media (max-width: $md-max-width) {
-    padding-left: rem(15);
     padding-right: rem(15);
+    padding-left: rem(15);
   }
 }
 
@@ -25,6 +26,17 @@
   background: $white;
 
   &-placeholder {
+
+    @at-root {
+      .card-skip {
+        .card-header,
+        .card-footer,
+        .card-body {
+          padding: rem(20) rem(25) !important;
+        }
+      }
+    }
+
     margin-bottom: rem(15);
 
     > div {
@@ -41,41 +53,32 @@
     .card-body {
       padding: 0;
     }
-
-    @at-root {
-      .card-skip {
-        .card-header,
-        .card-footer,
-        .card-body {
-          padding: rem(20) rem(25) !important;
-        }
-      }
-    }
   }
 
   &-top {
-    position: relative;
-    padding-top: 4px;
 
     @at-root {
       .vb__layout__squaredBorders & {
-        &:before {
+        &::before {
           border-radius: 0 !important;
         }
       }
     }
 
-    &:before {
-      content: '';
+    position: relative;
+    padding-top: 4px;
+
+    &::before {
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
+      left: 0;
       height: 4px;
-      background-color: $gray-2;
       overflow: hidden;
-      border-top-left-radius: calc(7px - 1px);
+      background-color: $gray-2;
       border-top-right-radius: calc(7px - 1px);
+      border-top-left-radius: calc(7px - 1px);
+      content: '';
     }
 
     &-default {
@@ -83,96 +86,115 @@
         background-color: $default !important;
       }
     }
+
     &-primary {
       &::before {
         background-color: $primary !important;
       }
     }
+
     &-secondary {
       &::before {
         background-color: $primary !important;
       }
     }
+
     &-success {
       &::before {
         background-color: $success !important;
       }
     }
+
     &-danger {
       &::before {
         background-color: $danger !important;
       }
     }
+
     &-warning {
       &::before {
         background-color: $warning !important;
       }
     }
+
     &-info {
       &::before {
         background-color: $info !important;
       }
     }
+
     &-light {
       &::before {
         background-color: $light !important;
       }
     }
+
     &-dark {
       &::before {
         background-color: $dark !important;
       }
     }
+
     &-white {
       &::before {
         background-color: $white !important;
       }
     }
+
     &-blue {
       &::before {
         background-color: $blue !important;
       }
     }
+
     &-red {
       &::before {
         background-color: $red !important;
       }
     }
+
     &-yellow {
       &::before {
         background-color: $yellow !important;
       }
     }
+
     &-orange {
       &::before {
         background-color: $orange !important;
       }
     }
+
     &-gray-1 {
       &::before {
         background-color: $gray-1 !important;
       }
     }
+
     &-gray-2 {
       &::before {
         background-color: $gray-2 !important;
       }
     }
+
     &-gray-3 {
       &::before {
         background-color: $gray-3 !important;
       }
     }
+
     &-gray-4 {
       &::before {
         background-color: $gray-4 !important;
       }
     }
+
     &-gray-5 {
       &::before {
         background-color: $gray-5 !important;
       }
     }
+
     &-gray-6 {
       &::before {
         background-color: $gray-6 !important;
@@ -184,13 +206,15 @@
 .card-header {
   &-flex {
     display: flex;
-    flex-direction: row;
+    min-height: rem(62);
     padding-top: 0;
     padding-bottom: 0;
-    min-height: rem(62);
+    flex-direction: row;
   }
+
   &-borderless {
     border-color: transparent !important;
+
     + .card-body {
       padding-top: 0;
     }
@@ -204,11 +228,12 @@
     border-color: $dark-gray-4;
 
     &-top {
-      &:before {
+      &::before {
         background: $dark-gray-4;
       }
     }
   }
+
   .card-header,
   .card-footer {
     border-color: $dark-gray-4;

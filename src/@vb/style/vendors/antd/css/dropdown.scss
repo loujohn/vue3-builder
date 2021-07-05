@@ -2,9 +2,9 @@
 @import '@/style/mixins.scss';
 
 .ant-dropdown-menu-item-group-list {
+  padding: 0 !important;
   margin: 0 !important;
   list-style: none !important;
-  padding: 0 !important;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -13,6 +13,7 @@
   .ant-dropdown-menu-item-group-title {
     color: $dark-gray-2 !important;
   }
+
   .ant-select-dropdown {
     &-menu-item-selected {
       color: $text;

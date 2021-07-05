@@ -15,8 +15,10 @@
       &-button {
         &-wrapper {
           color: $text;
+
           &-checked {
             color: $white;
+
             &:hover,
             &:active {
               color: $white;

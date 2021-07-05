@@ -5,6 +5,7 @@
   &__link {
     color: $primary;
     transition: all 0.2s ease-in-out;
+
     &:hover {
       color: $blue-light;
     }
@@ -13,6 +14,7 @@
       color: $primary;
       border-bottom: 1px solid $blue-light;
       transition: all 0.2s ease-in-out;
+
       &:hover {
         color: $blue-light;
         border-bottom: 1px solid rgba($blue-light, 0.8);
@@ -27,17 +29,17 @@
     font-size: rem(17);
     color: $dark;
 
-    &:before {
+    &::before {
       position: absolute;
       top: rem(5);
       left: 0;
-      content: '';
       display: block;
       float: left;
-      height: rem(15);
       width: rem(15);
+      height: rem(15);
       background: $primary;
       border-radius: 4px;
+      content: '';
     }
 
     > strong {
@@ -53,16 +55,16 @@
   // fided sidebar buttons
   &__sidebar {
     &__buttons {
-      pointer-events: none;
       position: fixed;
-      z-index: 800;
       right: rem(40);
-      height: 100%;
+      z-index: 800;
       display: flex;
+      height: 100%;
+      padding-bottom: rem(100);
+      pointer-events: none;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-bottom: rem(100);
 
       @media (max-width: $md-max-width) {
         right: rem(15);
@@ -70,23 +72,24 @@
     }
 
     &__button {
-      pointer-events: all;
-      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1) !important;
       display: block;
-      min-width: rem(50);
       height: rem(50);
-      line-height: rem(50);
-      text-align: center;
-      border-radius: 15px;
-      background: $white;
-      font-size: 18px;
-      transition: all 0.3s ease-in-out;
-      color: $primary;
+      min-width: rem(50);
       margin-top: rem(10);
+      font-size: 18px;
+      line-height: rem(50);
+      color: $primary;
+      text-align: center;
+      pointer-events: all;
+      background: $white;
+      border-radius: 15px;
+      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1) !important;
+      transition: all 0.3s ease-in-out;
 
       svg {
         width: rem(20);
         margin-top: rem(12);
+
         path {
           fill: $primary;
           stroke: $primary;
@@ -94,9 +97,9 @@
       }
 
       &__long {
-        margin: 0;
-        padding: 0 rem(20);
         height: rem(40);
+        padding: 0 rem(20);
+        margin: 0;
         line-height: rem(40);
 
         span {
@@ -106,8 +109,8 @@
       }
 
       &:hover {
-        background: $primary;
         color: $white;
+        background: $primary;
 
         i {
           color: $white;
@@ -122,10 +125,10 @@
       }
 
       i {
-        transition: all 0.3s ease-in-out;
         position: relative;
         bottom: -3px;
         color: $primary;
+        transition: all 0.3s ease-in-out;
       }
 
       &__primary {
@@ -143,10 +146,10 @@
       &__primary,
       &__success {
         i {
-          transition: all 0.3s ease-in-out;
           position: relative;
           bottom: -3px;
           color: $white;
+          transition: all 0.3s ease-in-out;
         }
       }
 
@@ -154,19 +157,19 @@
         position: relative;
 
         button {
-          padding: 0;
-          display: inline-block;
-          border-radius: 20px;
-          border: none;
           position: absolute;
-          z-index: 1001;
-          height: 26px;
-          width: 26px;
           top: -5px;
           right: -7px;
-          line-height: 25px;
-          outline: none !important;
+          z-index: 1001;
+          display: inline-block;
+          width: 26px;
+          height: 26px;
+          padding: 0;
           font-size: 18px;
+          line-height: 25px;
+          border: none;
+          border-radius: 20px;
+          outline: none !important;
           box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1) !important;
 
           i {
@@ -179,13 +182,13 @@
         }
 
         input {
-          cursor: pointer;
           position: absolute;
-          z-index: 2;
           top: 0;
           left: 0;
+          z-index: 2;
           width: 100%;
           height: 100%;
+          cursor: pointer;
           opacity: 0;
         }
 
@@ -202,11 +205,11 @@
   &__avatar {
     width: rem(40);
     height: rem(40);
-    border-radius: 5px;
     overflow: hidden;
-    background-color: $gray-1;
     text-align: center;
     vertical-align: middle;
+    background-color: $gray-1;
+    border-radius: 5px;
 
     &--rounded {
       border-radius: 50%;
@@ -305,17 +308,17 @@
     }
 
     .vb__utils__avatarGroupAdd {
-      flex-shrink: 0;
+      position: relative;
       width: rem(40);
       height: rem(40);
-      border-radius: 5px;
-      color: $gray-6;
-      background-color: $gray-2;
-      text-align: center;
-      border: 3px solid $white;
       margin-left: rem(-16);
-      position: relative;
       font-size: rem(18);
+      color: $gray-6;
+      text-align: center;
+      background-color: $gray-2;
+      border: 3px solid $white;
+      border-radius: 5px;
+      flex-shrink: 0;
 
       i {
         position: absolute;
@@ -328,8 +331,8 @@
 
   // custom checkboxes and radios controls
   &__control {
-    display: block;
     position: relative;
+    display: block;
     margin-bottom: rem(10);
     cursor: pointer;
 
@@ -340,19 +343,19 @@
     }
 
     &__indicator {
+      position: relative;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
       //position: absolute;
       //top: 0;
       //left: 0;
       margin-right: rem(8);
       vertical-align: top;
-      position: relative;
-      display: inline-block;
-      height: 18px;
-      width: 18px;
       background: $gray-2;
       border-radius: 3px;
 
-      &:after {
+      &::after {
         position: absolute;
         display: none;
         content: '';
@@ -376,26 +379,26 @@
 
     input:disabled ~ .vb__utils__control__indicator {
       pointer-events: none;
-      opacity: 0.6;
       background: $gray-2;
+      opacity: 0.6;
     }
 
-    input:checked ~ .vb__utils__control__indicator:after {
+    input:checked ~ .vb__utils__control__indicator::after {
       display: block;
     }
 
     &__checkbox {
-      .vb__utils__control__indicator:after {
+      .vb__utils__control__indicator::after {
         top: 3px;
         left: 6px;
         width: 6px;
         height: 10px;
-        transform: rotate(45deg);
         border: solid #fff;
         border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
       }
 
-      input:disabled ~ .vb__utils__control__indicator:after {
+      input:disabled ~ .vb__utils__control__indicator::after {
         border-color: #7b7b7b;
       }
     }
@@ -404,17 +407,17 @@
       .vb__utils__control__indicator {
         border-radius: 50% !important;
 
-        &:after {
+        &::after {
           top: 6px;
           left: 6px;
           width: 6px;
           height: 6px;
-          border-radius: 50% !important;
           background: #fff;
+          border-radius: 50% !important;
         }
       }
 
-      input:disabled ~ .vb__utils__control__indicator:after {
+      input:disabled ~ .vb__utils__control__indicator::after {
         background: #7b7b7b;
       }
     }
@@ -422,14 +425,14 @@
 
   // donut badge
   &__donut {
+    position: relative;
+    top: rem(2);
     display: inline-block;
     width: rem(16);
     height: rem(16);
-    border-radius: 100%;
-    border: 4px solid $default;
-    position: relative;
-    top: rem(2);
     margin-right: rem(4);
+    border: 4px solid $default;
+    border-radius: 100%;
 
     &--md {
       width: rem(26);
@@ -439,27 +442,35 @@
     &--default {
       border-color: $default;
     }
+
     &--primary {
       border-color: $primary;
     }
+
     &--secondary {
       border-color: $secondary;
     }
+
     &--success {
       border-color: $success;
     }
+
     &--warning {
       border-color: $warning;
     }
+
     &--danger {
       border-color: $danger;
     }
+
     &--info {
       border-color: $info;
     }
+
     &--yellow {
       border-color: $yellow;
     }
+
     &--orange {
       border-color: $orange;
     }
@@ -471,20 +482,21 @@
     text-align: center;
 
     li {
-      text-align: center;
       display: inline-block;
       width: rem(40);
       height: rem(40);
-      line-height: rem(40);
-      font-size: rem(36);
       padding: rem(10) rem(30);
-      box-sizing: content-box !important;
-      border-radius: 3px;
-      background: $gray-1;
       margin: rem(10);
+      font-size: rem(36);
+      line-height: rem(40);
+      text-align: center;
+      background: $gray-1;
+      border-radius: 3px;
+      box-sizing: content-box !important;
+
       &:hover {
-        background: $black;
         color: $white;
+        background: $black;
       }
     }
 
@@ -499,9 +511,9 @@
     .themed-container {
       padding-top: 0.75rem;
       padding-bottom: 0.75rem;
+      margin-bottom: rem(10);
       background-color: $gray-1;
       border: 1px solid $border;
-      margin-bottom: rem(10);
     }
   }
 }
@@ -511,12 +523,15 @@
   .vb__utils {
     &__link {
       color: $primary;
+
       &:hover {
         color: $blue-light;
       }
+
       &__underlined {
         color: $primary;
         border-bottom: 1px solid $dark-gray-3;
+
         &:hover {
           color: $blue-light;
           border-bottom: 1px solid $dark-gray-2;
@@ -531,6 +546,7 @@
     &__sidebar {
       &__button {
         background: $dark-gray-4;
+
         &__success {
           background: $success;
         }
@@ -544,22 +560,23 @@
     }
 
     &__avatar {
-      border-color: $dark-gray-4;
       background: $dark-gray-4;
+      border-color: $dark-gray-4;
     }
 
     &__avatarGroupAdd {
-      border-color: $dark-gray-4;
       background: $dark-gray-5;
+      border-color: $dark-gray-4;
     }
 
     &__iconPresent {
       li {
-        background: $dark-gray-4;
         color: $dark-gray-1;
+        background: $dark-gray-4;
+
         &:hover {
-          background: $dark-gray-1;
           color: $dark-gray-4;
+          background: $dark-gray-1;
         }
       }
     }
