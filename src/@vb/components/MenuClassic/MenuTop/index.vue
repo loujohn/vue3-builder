@@ -32,9 +32,9 @@
           </g>
         </svg>
         <div :class="$style.name">{{ settings.logo }}</div>
-        <div :class="$style.descr" class="text-capitalize">
+        <!-- <div :class="$style.descr" class="text-capitalize">
           {{ settings.version }}
-        </div>
+        </div> -->
       </div>
     </div>
     <div :class="$style.navigation">
