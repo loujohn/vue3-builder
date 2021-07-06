@@ -1,4 +1,25 @@
 {
+  "榆林生态修复": {
+    "preselectedVariant": "榆林生态修复",
+    "primaryColor": "#4b7cf3",
+    "logo": "榆林矿山地质环境动态监测系统",
+    "isMenuCollapsed": false,
+    "menuColor": "dark",
+    "isGrayBackground": false,
+    "isGrayTopbar": false,
+    "isTopbarFixed": false,
+    "layoutBreadcrumbs": "noBreadcrumbs",
+    "layoutFooter": "v1",
+    "isContentMaxWidth": false,
+    "isAppMaxWidth": false,
+    "layoutMenu": "classic",
+    "flyoutMenuType": "flyout",
+    "flyoutMenuColor": "blue",
+    "layoutTopbar": "none",
+    "menuLayoutType": "top",
+    "isTopbarSeparated": false,
+    "isMenuShadow": false
+  },
   "default": {
     "preselectedVariant": "default",
     "primaryColor": "#4b7cf3",
