@@ -25,6 +25,7 @@
     "lodash": "^4.17.21",
     "pinia": "^2.0.0-beta.3",
     "store": "^2.0.12",
+    "vite-plugin-html": "^2.0.7",
     "vue": "^3.0.5",
     "vue-i18n": "^9.1.6",
     "vue-router": "4.0.10",
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@types/cesium": "^1.67.13",
     "@types/node": "^15.12.5",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
