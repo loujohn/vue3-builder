@@ -1,5 +1,5 @@
 <template>
-  <div id="cesiumContainer" class="bg-no-repeat bg-cover" style=" background-color: #023591;background-image: url('src/assets/bjmengceng.png');"></div>
+  <div id="cesiumContainer" class="bg-no-repeat bg-cover" style="background-color: #023591; background-image: url('src/assets/bjmengceng.png');"></div>
 </template>
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';

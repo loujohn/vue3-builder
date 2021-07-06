@@ -72,9 +72,9 @@
           <div :class="$style.air__menuTop__logo__name">
             {{ settings.logo }}
           </div>
-          <div :class="$style.air__menuTop__logo__descr">
+          <!-- <div :class="$style.air__menuTop__logo__descr">
             {{ settings.version }}
-          </div>
+          </div> -->
         </div>
         <div :class="$style.air__menuTop__scroll">
           <div :class="$style.air__menuTop__container">
