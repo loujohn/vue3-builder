@@ -56,21 +56,18 @@ export default defineComponent({
       document.querySelector('html')?.setAttribute('data-vb-theme', theme);
       settings.changeSetting('menuColor', theme === 'dark' ? 'dark' : 'white');
     });
-    watch(
-      () => primaryColor,
-      (primaryColor) => {
-        const styleElement = document.querySelector('#primaryColor');
-        if (styleElement) {
-          styleElement.remove();
-        }
-        const body = document.querySelector('body');
-        const styleEl = document.createElement('style');
-        const css = document.createTextNode(`:root { --vb-color-primary: ${primaryColor};}`);
-        styleEl.setAttribute('id', 'primaryColor');
-        styleEl.appendChild(css);
-        body?.appendChild(styleEl);
+    watch(primaryColor, (primaryColor) => {
+      const styleElement = document.querySelector('#primaryColor');
+      if (styleElement) {
+        styleElement.remove();
       }
-    );
+      const body = document.querySelector('body');
+      const styleEl = document.createElement('style');
+      const css = document.createTextNode(`:root { --vb-color-primary: ${primaryColor};}`);
+      styleEl.setAttribute('id', 'primaryColor');
+      styleEl.appendChild(css);
+      body?.appendChild(styleEl);
+    });
     return {};
   }
 });
