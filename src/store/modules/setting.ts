@@ -31,7 +31,7 @@ export const useSettingStore = defineStore({
       authPagesColor: 'gray',
       isAuthTopbar: true,
       primaryColor: '#4b7cf3',
-      leftMenuWidth: 300,
+      leftMenuWidth: 312,
       isMenuUnfixed: false,
       isMenuShadow: false,
       isTopbarFixed: false,

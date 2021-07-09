@@ -11,7 +11,7 @@ export const router = createRouter({
       children: [
         {
           path: 'map',
-          component: () => import('@/@map/map.vue')
+          component: () => import('@/views/index.vue')
         }
       ]
     }

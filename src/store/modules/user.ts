@@ -6,7 +6,7 @@ export const useUserStore = defineStore({
   state: (): IUser => ({
     id: '',
     name: '',
-    role: ''
+    role: []
   })
 });
 export function useUserStoreWithOut() {

@@ -14,7 +14,7 @@ export const getMenuData = [
       {
         title: 'Dashboard Alpha',
         key: 'iasepr',
-        url: '/dashboard/alpha'
+        url: '/map'
       },
       {
         title: 'Dashboard Beta',
