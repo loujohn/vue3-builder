@@ -5,7 +5,14 @@
     <div :class="$style.handler" @click="toggleMobileMenu">
       <div :class="$style.handlerIcon"></div>
     </div>
-    <a-drawer :closable="false" :visible="settings.isMobileMenuOpen" placement="left" :wrap-class-name="$style.mobileMenu" @close="toggleMobileMenu">
+    <a-drawer
+      :closable="false"
+      :visible="settings.isMobileMenuOpen"
+      placement="left"
+      :wrap-class-name="$style.mobileMenu"
+      @close="toggleMobileMenu"
+      :width="settings.leftMenuWidth"
+    >
       <menu-left />
     </a-drawer>
   </div>
