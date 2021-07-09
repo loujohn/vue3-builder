@@ -1,13 +1,16 @@
-import styleImport from 'vite-plugin-style-import';
+import vitePluginImp from 'vite-plugin-imp';
 
 export function configStyleImportPlugin(isBuild: boolean) {
   if (!isBuild) return [];
-  const pwaPlugin = styleImport({
-    libs: [
+  const pwaPlugin = vitePluginImp({
+    libList: [
       {
-        libraryName: 'ant-design-vue',
-        esModule: true,
-        resolveStyle: (name) => {
+        libName: 'ant-design-vue',
+        style(name) {
+          if (/popconfirm/.test(name)) {
+            // support multiple style file path to import
+            return ['ant-design-vue/es/button/style/index.css', 'ant-design-vue/es/popover/style/index.css'];
+          }
           return `ant-design-vue/es/${name}/style/index.css`;
         }
       }
