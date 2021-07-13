@@ -19,7 +19,8 @@ import {
   Radio,
   Switch,
   Slider,
-  Dropdown
+  Dropdown,
+  Avatar
 } from 'ant-design-vue';
 import { App } from 'vue';
 
@@ -46,6 +47,7 @@ const ant = {
     Vue.use(Switch);
     Vue.use(Slider);
     Vue.use(Dropdown);
+    Vue.use(Avatar);
   }
 };
 export default ant;

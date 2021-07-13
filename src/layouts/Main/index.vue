@@ -60,7 +60,7 @@
 
 <script lang="ts">
 import { computed, onMounted, ref, defineComponent } from 'vue';
-// import VbTopbar from '@/@vb/components/Topbar';
+import VbTopbar from '@/@vb/components/Topbar/index.vue';
 import VbSidebar from '@/@vb/components/Sidebar/index.vue';
 // import VbSupportChat from '@/@vb/components/SupportChat';
 import VbVariants from '@/@vb/components/Variants/index.vue';
@@ -81,7 +81,7 @@ export default defineComponent({
     VbMenuClassic,
     VbMenuFlyout,
     VbMenuSimply,
-    // VbTopbar,
+    VbTopbar,
     VbSidebar,
     // VbSupportChat,
     VbVariants,

@@ -36,11 +36,11 @@
                 <h6>
                   <strong>语言</strong>
                 </h6>
-                <a-select :value="settings.locale" style="width: 100%;" @change="(value) => changeSettingValue(value, 'locale')">
-                  <a-select-option value="en-US">English (en-US)</a-select-option>
+                <a-select :value="settings.locale" style="width: 100%;" @change="(value) => changelocale(value)">
+                  <a-select-option value="en_US">English (en-US)</a-select-option>
                   <a-select-option value="fr-FR">French (fr-FR)</a-select-option>
                   <a-select-option value="ru-RU">Русский (ru-RU)</a-select-option>
-                  <a-select-option value="zh-CN">简体中文 (zh-CN))</a-select-option>
+                  <a-select-option value="zh_CN">简体中文 (zh-CN))</a-select-option>
                 </a-select>
               </div>
             </a-collapse-panel>
@@ -552,6 +552,9 @@ export default defineComponent({
       const value = !settings[setting];
       settings.changeSetting(setting, value);
     };
+    const changelocale = (value) => {
+      settings.changelocale(value);
+    };
     const toggleSettings = () => {
       settings.changeSetting('isSidebarOpen', !settings.isSidebarOpen);
     };
@@ -572,6 +575,7 @@ export default defineComponent({
       changeSettingValue,
       changeSettingEvent,
       changeSettingSwitch,
+      changelocale,
       toggleSettings,
       togglePreselectedThemes,
       selectColor,

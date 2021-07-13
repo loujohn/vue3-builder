@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { store } from '@/store';
-import { ISetting } from '/#/setting';
+import { ISetting, LocaleType } from '/#/setting';
 import * as localStore from 'store';
 const STORED_SETTINGS = (storedSettings: ISetting): ISetting => {
   Object.keys(storedSettings).forEach((key) => {
@@ -13,7 +13,7 @@ export const useSettingStore = defineStore({
   id: 'setting',
   state: (): ISetting =>
     STORED_SETTINGS({
-      locale: 'zh-CN',
+      locale: 'zh_CN',
       logo: 'Vue3 Builder',
       authProvider: 'jwt',
       version: 'fluent',
@@ -60,6 +60,10 @@ export const useSettingStore = defineStore({
     changeSetting<T extends keyof ISetting, U extends ISetting[T]>(key: T, val: U): void {
       localStore.set(`app.settings.${key}`, val);
       this.$state[key] = val;
+    },
+    changelocale(locale: LocaleType) {
+      localStore.set('app.settings.locale', locale);
+      location.reload();
     },
     changeSettingBulk(setting: Partial<ISetting>): void {
       Object.keys(setting).forEach((key) => {

@@ -1,6 +1,6 @@
-export type language = 'zh-CN' | 'en-US';
+export type LocaleType = 'zh_CN' | 'en_US';
 export interface ISetting {
-  locale: language;
+  locale: LocaleType;
   logo: string;
   authProvider: 'jwt';
   version: 'fluent';
