@@ -13,9 +13,11 @@ const __APP_INFO__ = {
   pkg: { dependencies, devDependencies, name, version },
   lastBuildTime: moment().format('YYYY-MM-DD HH:mm:ss')
 };
+
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir);
 }
+
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv): UserConfig => {
   const root = process.cwd();
@@ -57,7 +59,8 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       },
       // Turning off brotliSize display can slightly reduce packaging time
       brotliSize: false,
-      chunkSizeWarningLimit: 1500
+      chunkSizeWarningLimit: 1500,
+      assetsInlineLimit: 40960
     },
     define: {
       __APP_INFO__: JSON.stringify(__APP_INFO__)

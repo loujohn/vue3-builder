@@ -1,0 +1,63 @@
+{
+    "pitch": 0,
+    "layers": [
+      {
+        "source": "global-vecter-layer",
+        "id": "gjtdt_global-vecter-layer",
+        "type": "raster",
+        "paint": {},
+        "layout": {
+          "visibility": "visible"
+        }
+      },
+      {
+        "source": "global-vecter-layer-symbol",
+        "id": "gjtdt_global-vecter-layer-symbol",
+        "type": "raster",
+        "paint": {},
+        "layout": {
+          "visibility": "visible"
+        }
+      }
+    ],
+    "sprite": "http://zhsq.digitalcq.com/d2cpro/oms/static/sprites/label_1514359437",
+    "glyphs": "http://zhsq.digitalcq.com/d2cpro/oms/static/fonts/font_1514359479/{fontstack}/{range}.pbf",
+    "name": "dt_65poi_2sources",
+    "bearing": -0.6457764063968625,
+    "metadata": {
+      "mapbox:groups": {
+        "74a8f6c01da423297c70e407f3cede7a": {
+          "name": "3D建筑",
+          "collapsed": true
+        },
+        "46e6afb5f5d5cd1f177d95ea4c613198": {
+          "name": "2D建筑",
+          "collapsed": true
+        },
+        "a67b4ba151f3ba82d59c88bad54f3f61": {
+          "name": "poi",
+          "collapsed": false
+        }
+      }
+    },
+    "owner": "jing-sam",
+    "zoom": 13.596417517144896,
+    "center": [
+      106.53248485840038,
+      29.553725318070363
+    ],
+    "version": 8,
+    "sources": {
+      "global-vecter-layer": {
+          "type": "raster",
+          "tiles": ["http:\/\/t0.tianditu.com\/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=ad593d21889f41b16ab4835848195eb3"],
+          "tileSize": 256
+      },
+      "global-vecter-layer-symbol": {
+          "type": "raster",
+          "tiles": ["http:\/\/t0.tianditu.com\/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk=ad593d21889f41b16ab4835848195eb3"],
+          "tileSize": 256
+      }
+    },
+    "id": "bcd9c64662d10a768cb7b14dfa6182aa"
+  }

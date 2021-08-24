@@ -1,0 +1,46 @@
+{
+  "sprite": "http://103.131.169.87:89/oms/static/sprites/default_label",
+  "glyphs": "http://103.131.169.87:89/oms/static/fonts/default_font/{fontstack}/{range}.pbf",
+  "center": [
+    107.55298787626248,
+    30.199938822039385
+  ],
+  "zoom": 7.067351578907687,
+  "version": 8,
+  "sources": {
+    "global-vecter-layer": {
+      "type": "raster",
+      "tiles": [
+        "http://t0.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=562b763a349c0198931a938949108363"
+      ],
+      "tileSize": 256
+    },
+    "global-vecter-layer-symbol": {
+      "type": "raster",
+      "tiles": [
+        "http://t0.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk=562b763a349c0198931a938949108363"
+      ],
+      "tileSize": 256
+    }
+  },
+  "layers": [
+    {
+      "source": "global-vecter-layer",
+      "id": "gjtdt_global-vecter-layer",
+      "type": "raster",
+      "paint": {},
+      "layout": {
+        "visibility": "visible"
+      }
+    },
+    {
+      "source": "global-vecter-layer-symbol",
+      "id": "gjtdt_global-vecter-layer-symbol",
+      "type": "raster",
+      "paint": {},
+      "layout": {
+        "visibility": "visible"
+      }
+    }
+  ]
+}

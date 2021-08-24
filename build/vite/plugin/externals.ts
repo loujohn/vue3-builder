@@ -4,6 +4,7 @@ export function configExternal(): Plugin | Plugin[] {
   return resolveExternalsPlugin({
     cesium: 'Cesium',
     mars3d: 'mars3d',
-    mapConfig: 'mapConfig'
+    mapConfig: 'mapConfig',
+    Map2D: 'Map2D'
   });
 }
